@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">aaaa</string>
+    <string name="app_name">test</string>
     <string name="hello_world">Hello world!\n\n\n\n\n\n\n\n
         Hello world!\n\n\n\n\n\n\n\n
         Hello world!\n\n\n\n\n\n\n\n
@@ -32,4 +32,10 @@
         Hello world!\n</string>
 	<string name="add">Add</string>
 	<string name="paste">paste</string>
+	<string name="preview"><![CDATA["<<"]]></string>
+	<string name="next"><![CDATA[">>"]]></string>
+	<string name="start"><![CDATA[">"]]></string>
+	<string name="pause"><![CDATA["="]]></string>
+	<string name="stop"><![CDATA["ㅁ"]]></string>
+	<string name="time_init">mm:ss</string>
 </resources>

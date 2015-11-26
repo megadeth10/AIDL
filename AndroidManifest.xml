@@ -5,8 +5,10 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="17"
+        android:minSdkVersion="7"
         android:targetSdkVersion="19" />
+    
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -14,9 +16,9 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.music.MainActivity"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.Holo.Light.DarkActionBar"
+            android:theme="@android:style/Theme.Black"
             android:uiOptions="splitActionBarWhenNarrow"
             android:enabled="true" ><!-- -->
             <intent-filter>
@@ -25,6 +27,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name="com.example.aaaa.CalcService"
+            android:enabled="true">
+            <intent-filter >
+                <action android:name="com.example.aaaa.CalcService"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

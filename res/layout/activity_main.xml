@@ -2,14 +2,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="${relativePackage}.${activityClass}" >
-	<ScrollView 
-	    android:layout_width="match_parent"
-    	android:layout_height="match_parent">
-	    <TextView
-	        android:id="@+id/textview"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="@string/hello_world" />
-	</ScrollView>
+    tools:context="com.example.stubservice.MainActivity" >
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/Call_Service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="call service" />
+    
+    <TextView
+        android:id="@+id/Time_View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Call_Service"/>
+    
+    <SeekBar
+        android:id="@+id/Music_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Time_View"
+        android:progress="0" />
+
+    <LinearLayout
+        android:id="@+id/Controll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Music_bar"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/Preview"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/preview" />
+
+        <ToggleButton
+            android:id="@+id/StartAndPause"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textOn="@string/start"
+            android:textOff="@string/pause"
+            android:button="@null"
+            android:checked="true" />
+
+        <Button
+            android:id="@+id/Stop"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/stop" />
+
+        <Button
+            android:id="@+id/Next"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/List"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/Controll" >
+    </ListView>
+
+
 </RelativeLayout>
